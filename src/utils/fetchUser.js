@@ -8,8 +8,7 @@ export const usersAccessToken = () => {
 
 export const fetchUser = () => {
 	const token = localStorage.getItem("user");
-	const userInfo =
-		token !== "undefined" ? JSON.parse(token) : localStorage.clear();
+	const userInfo = token !== "undefined" ? JSON.parse(token) : undefined;
 
 	return userInfo;
 };
